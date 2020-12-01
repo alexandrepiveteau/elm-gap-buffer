@@ -1,0 +1,24 @@
+name: elm-test
+
+on: [ push, pull_request ]
+
+jobs:
+  elm-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Prepare NodeJS
+      - name: Set up Node
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: '12'
+
+      # Run elm-test
+      - name: Set up Elm
+        run: |
+          npm install -g elm elm-test
+      - name: Run elm-test
+        run: |
+          elm-test
