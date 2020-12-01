@@ -1,5 +1,7 @@
 # elm-gap-buffer
 
+![elm-test](https://github.com/alexandrepiveteau/elm-gap-buffer/workflows/elm-test/badge.svg?branch=master)
+
 An array-based [gap buffer](https://en.wikipedia.org/wiki/Gap_buffer) implementation, based on
 the `Array` data structure from `elm/core`.
 
